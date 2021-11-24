@@ -1,6 +1,4 @@
-https://avatars.githubusercontent.com/u/94608869?s=200&v=4
-
-![Hybrit Logo](./hybritLogo.png)
+![Hybrit Logo](img/HybrITLogo.png)
 
 # Introduction
 
