@@ -4,7 +4,7 @@
 
 This Repository is intended for HybrIT Services Partners to easily and securely provide access to some or all subscriptions in their Azure Tenancy.
 
-The Role base Azure Lighthouse configuration uses Privelege Groups in HybrIT's own AD Tenant. This provides a mechanism to for auditable JIT privilege access at no additional cost to the partner.
+The Role base Azure Lighthouse configuration uses Privelege Groups in HybrIT's own AD Tenant. This provides a mechanism for auditable JIT privilege access at no additional cost to the partner.
 
 https://azure.microsoft.com/en-gb/blog/privileged-identity-management-with-azure-lighthouse-enables-zero-trust/
 
