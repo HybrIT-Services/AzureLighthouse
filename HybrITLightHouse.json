@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.4.1008.15138",
-      "templateHash": "16064631832920621673"
+      "templateHash": "11948577672809146617"
     }
   },
   "parameters": {
@@ -41,6 +41,61 @@
           "delegatedRoleDefinitionIds": [
             "b24988ac-6180-42a0-ab88-20f7382dd24c"
           ]
+        },
+        {
+          "principalId": "9b380201-5bbc-4dd2-a16c-39e905d4a595",
+          "principalIdDisplayName": "Lighthouse - Azure Contributors",
+          "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
+        },
+        {
+          "principalId": "5712b417-9fbb-4bce-80b0-0a2431dd762f",
+          "principalIdDisplayName": "Lighthouse - Azure Readers",
+          "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7"
+        },
+        {
+          "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
+          "principalIdDisplayName": "Lighthouse - Azure Operators",
+          "roleDefinitionId": "1c0163c0-47e6-4577-8991-ea5c82e286e4"
+        },
+        {
+          "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
+          "principalIdDisplayName": "Lighthouse - Azure Operators",
+          "roleDefinitionId": "00c29273-979b-4161-815c-10b084fb9324"
+        },
+        {
+          "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
+          "principalIdDisplayName": "Lighthouse - Azure Operators",
+          "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7"
+        },
+        {
+          "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
+          "principalIdDisplayName": "Lighthouse - Azure Operators",
+          "roleDefinitionId": "92aaf0da-9dab-42b6-94a3-d43ce8d16293"
+        },
+        {
+          "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
+          "principalIdDisplayName": "Lighthouse - Azure Operators",
+          "roleDefinitionId": "749f88d5-cbae-40b8-bcfc-e573ddc772fa"
+        },
+        {
+          "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
+          "principalIdDisplayName": "Lighthouse - Azure Operators",
+          "roleDefinitionId": "d3881f73-407a-4167-8283-e981cbba0404"
+        },
+        {
+          "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
+          "principalIdDisplayName": "Lighthouse - Azure Operators",
+          "roleDefinitionId": "5fb5aef8-1081-4b8e-bb16-9d5d0385bab5"
+        },
+        {
+          "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
+          "principalIdDisplayName": "Lighthouse - Azure Operators",
+          "roleDefinitionId": "c7393b34-138c-406f-901b-d8cf2b17e6ae"
+        },
+        {
+          "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
+          "principalIdDisplayName": "Lighthouse - Azure Operators",
+          "roleDefinitionId": "494ae006-db33-4328-bf46-533a6560a3ca"
         }
       ]
     }
