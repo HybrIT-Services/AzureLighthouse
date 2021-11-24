@@ -36,10 +36,10 @@ param authorizations array = [
     'roleDefinitionId': 'acdd72a7-3385-48ef-bd42-f606fba81ae7'
   }
   {
-    // Assign Virtual Machine Administrator Login Role to the 'Lighthouse - Azure Operators'
+    // Assign Virtual Machine Contributor  Role to the 'Lighthouse - Azure Operators'
     'principalId': '2c09140a-aad7-44d3-90cc-f54c001ecf70'
     'principalIdDisplayName': 'Lighthouse - Azure Operators'
-    'roleDefinitionId': '1c0163c0-47e6-4577-8991-ea5c82e286e4'
+    'roleDefinitionId': '9980e02c-c2be-4d73-94e8-173b1dc7cf3c'
   }
   {
     // Assign Backup Operator Role to the 'Lighthouse - Azure Operators'
