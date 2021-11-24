@@ -1,0 +1,1 @@
+New-AzSubscriptionDeployment -location uksouth -TemplateURI .\HybrITLightHouse.json
