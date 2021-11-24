@@ -86,6 +86,8 @@ https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
 HybrIT are using privlege access groups to provide access into your environment. This means no user or admin will have standing access. To gain access HybrIT's consultants will need to elevate themselves into the group using Privlege Identity Management with in the HybrIT Azure AD Tenant.
 This has the benefit of having a full audit trail of who had access and when, additionally it means the licenses required for PIM are assigned within HybrIT's own Azure AD Tenant and incurs no cost to the Partner.
 
+Additionally when elevating into groups with any kind of write privilege (all except reader) HybrIT's consultant will immediately be subject to MFA.
+
 ## Role Assignment Summary Table
 
 | Privilelege Access Group                  	| Role Assignment                          	|
