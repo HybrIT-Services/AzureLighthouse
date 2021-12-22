@@ -19,6 +19,9 @@ This Feature was announced by Microsoft July 2021, for further reading please se
   - [Roles](#roles)
   - [HybrIT Groups](#hybrit-groups)
   - [Role Assignment Summary Table](#role-assignment-summary-table)
+  - [We only want to allow Reader at this stage](#we-only-want-to-allow-reader-at-this-stage)
+    - [Apply to single subscription (reader only)](#apply-to-single-subscription-reader-only)
+    - [Apply to all subscriptions (reader only)](#apply-to-all-subscriptions-reader-only)
 - [Remove Access](#remove-access)
 
 # How to use
@@ -108,6 +111,28 @@ Additionally when elevating into groups with any kind of write privilege (all ex
 | Lighthouse - Azure Operators              	| Managed Application Operator             	|
 | Lighthouse - Azure Operators              	| Site Recovery Operator                   	|
 
+## We only want to allow Reader at this stage
+
+If your engagement with HybrIT is only in the discovery phases and read access is the only requirement then you can use the same script logic as the previous section as the previous section but reference the [HybrITReaderLighthouse.json](HybrITReaderLightHouse.Bicep) file.
+
+For instructions on connecting and selecting single subscriptions please see earlier [instructions](#apply-to-single-subscription). The run the appropriate powershell command below
+
+### Apply to single subscription (reader only)
+
+```
+New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubusercontent.com/HybrIT-Services/AzureLighthouse/main/HybrITReaderLightHouse.json'
+```
+### Apply to all subscriptions (reader only)
+
+```
+$subs = Get-AzSubscription
+foreach ($sub in $subs) {
+
+    Select-AzSubscription -SubscriptionId $sub.Id
+    New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubusercontent.com/HybrIT-Services/AzureLighthouse/main/HybrITReaderLightHouse.json'
+}
+
+```
 
 # Remove Access
 
