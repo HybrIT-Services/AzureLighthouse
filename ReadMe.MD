@@ -56,7 +56,7 @@ New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubu
 
 ## Apply to All Subscriptions
 
-**Note: If you intend to use a seperate Subscription of Azure Resource Guard then ensure to deploy that subscription after running the below or apply one subscription at a time**
+**Note: If you intend to use a seperate Subscription of Azure Resource Guard then ensure to deploy that subscription after running the below or apply one subscription at a time or exlude the Backup Security Subscription from the assignment**
 
 1.  To apply to all subscription that your signed in user has rights to run the below commands. Firstly check you can see the intented subscriptions from your PowerShell windows
 
@@ -80,6 +80,17 @@ foreach ($sub in $subs) {
 
 ```
 
+3.  If you need to exclude a subscription such as BackupSecurity filter it out with the below **ensure to check your subscription name**
+
+```
+$subs = Get-AzSubscription | Where-Object { $_.name -notlike "*BackupSecurity*" }
+foreach ($sub in $subs) {
+
+    Select-AzSubscription -SubscriptionId $sub.Id
+    New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubusercontent.com/HybrIT-Services/AzureLighthouse/main/HybrITLightHouse.json'
+}
+
+```
 # What Roles get assigned and to who?
 
 ## Roles
