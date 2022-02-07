@@ -22,6 +22,7 @@ This Feature was announced by Microsoft July 2021, for further reading please se
   - [We only want to allow Reader at this stage](#we-only-want-to-allow-reader-at-this-stage)
     - [Apply to single subscription (reader only)](#apply-to-single-subscription-reader-only)
     - [Apply to all subscriptions (reader only)](#apply-to-all-subscriptions-reader-only)
+- [Apply Backup Security (Resource Guard) to single subscription](#apply-backup-security-resource-guard-to-single-subscription)
 - [Remove Access](#remove-access)
 
 # How to use
@@ -132,6 +133,13 @@ foreach ($sub in $subs) {
     New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubusercontent.com/HybrIT-Services/AzureLighthouse/main/HybrITReaderLightHouse.json'
 }
 
+```
+# Apply Backup Security (Resource Guard) to single subscription
+
+If you require HybrIT to provide Multi-User authorization to protect your back up against "Critical Operations" such as preventing deletion by a bad actor then apply the below command against a dedicated Subscription that is used only for the purpose of Resource Guard. For more information see: https://docs.microsoft.com/en-us/azure/backup/multi-user-authorization
+
+```
+New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubusercontent.com/HybrIT-Services/AzureLighthouse/main/HybrITSecureBackupLightHouse.json'
 ```
 
 # Remove Access
