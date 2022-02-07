@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.4.1124.51302",
+      "templateHash": "9184568546231012904"
+    }
+  },
+  "parameters": {
+    "mspOfferName": {
+      "type": "string",
+      "defaultValue": "HybrIT IT Services"
+    },
+    "mspOfferDescription": {
+      "type": "string",
+      "defaultValue": "HybrIT Backup Security Services"
+    },
+    "managedByTenantId": {
+      "type": "string",
+      "defaultValue": "065cf743-5dc7-407b-9646-48f60f4736f9"
+    },
+    "authorizations": {
+      "type": "array",
+      "defaultValue": [
+        {
+          "principalId": "c394ac5d-e580-457f-bc50-06f4a05698e7",
+          "principalIdDisplayName": "Lighthouse - Azure  Backup Security",
+          "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
+        }
+      ]
+    }
+  },
+  "variables": {
+    "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
+    "mspAssignmentName": "[guid(parameters('mspOfferName'))]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.ManagedServices/registrationDefinitions",
+      "apiVersion": "2020-02-01-preview",
+      "name": "[variables('mspRegistrationName')]",
+      "properties": {
+        "description": "[parameters('mspOfferDescription')]",
+        "registrationDefinitionName": "[variables('mspRegistrationName')]",
+        "managedByTenantId": "[parameters('managedByTenantId')]",
+        "authorizations": "[parameters('authorizations')]"
+      }
+    },
+    {
+      "type": "Microsoft.ManagedServices/registrationAssignments",
+      "apiVersion": "2020-02-01-preview",
+      "name": "[variables('mspAssignmentName')]",
+      "properties": {
+        "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions', variables('mspRegistrationName'))]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ManagedServices/registrationDefinitions', variables('mspRegistrationName'))]"
+      ]
+    }
+  ],
+  "outputs": {
+    "mspOffer_output": {
+      "type": "string",
+      "value": "[format('Managed by {0}', parameters('mspOfferName'))]"
+    },
+    "authorizations_output": {
+      "type": "array",
+      "value": "[parameters('authorizations')]"
+    }
+  }
+}
