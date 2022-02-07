@@ -3,6 +3,12 @@ param mspOfferDescription string = 'HybrIT Backup Security Services'
 param managedByTenantId string = '065cf743-5dc7-407b-9646-48f60f4736f9'
 param authorizations array = [  
   {
+    // Assign Reader Role to the 'Lighthouse - Azure  Readers'
+    'principalId': '5712b417-9fbb-4bce-80b0-0a2431dd762f'
+    'principalIdDisplayName': 'Lighthouse - Azure Readers'
+    'roleDefinitionId': 'acdd72a7-3385-48ef-bd42-f606fba81ae7'
+  }
+  {
     // Assign Contributor Role to the 'Lighthouse - Azure  Backup Security'
     'principalId': 'c394ac5d-e580-457f-bc50-06f4a05698e7'
     'principalIdDisplayName': 'Lighthouse - Azure  Backup Security'
