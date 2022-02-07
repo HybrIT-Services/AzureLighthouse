@@ -56,6 +56,8 @@ New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubu
 
 ## Apply to All Subscriptions
 
+**Note: If you intend to use a seperate Subscription of Azure Resource Guard then ensure to deploy that subscription after running the below or apply one subscription at a time**
+
 1.  To apply to all subscription that your signed in user has rights to run the below commands. Firstly check you can see the intented subscriptions from your PowerShell windows
 
 ```
@@ -138,10 +140,11 @@ foreach ($sub in $subs) {
 
 If you require HybrIT to provide Multi-User authorization to protect your back up against "Critical Operations" such as preventing deletion by a bad actor then apply the below command against a dedicated Subscription that is used only for the purpose of Resource Guard. For more information see: https://docs.microsoft.com/en-us/azure/backup/multi-user-authorization
 
+**Be Careful not to apply other lighthouse files to your BackupSecurity Subscription**
+
 ```
 New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubusercontent.com/HybrIT-Services/AzureLighthouse/main/HybrITSecureBackupLightHouse.json'
 ```
-
 # Remove Access
 
 Access can be removed at any time from the Portal or by using Azure PowerShell. To remove from Access from the portal use the search bar to find "Service Providers"
