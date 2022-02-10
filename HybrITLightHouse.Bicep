@@ -21,6 +21,7 @@ param authorizations array = [
     'roleDefinitionId': '18d7d88d-d35e-4fb5-a5c3-7773c20a72d9'
     'delegatedRoleDefinitionIds': [
         'b24988ac-6180-42a0-ab88-20f7382dd24c'
+        '92aaf0da-9dab-42b6-94a3-d43ce8d16293'
     ]
   }
   {

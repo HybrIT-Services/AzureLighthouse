@@ -9,7 +9,7 @@ param authorizations array = [
     'roleDefinitionId': 'acdd72a7-3385-48ef-bd42-f606fba81ae7'
   }
   {
-    // Assign Contributor Role to the 'Lighthouse - Azure  Backup Security'
+    // Assign Contributor Role to the 'Lighthouse - Azure Backup Security'
     'principalId': 'c394ac5d-e580-457f-bc50-06f4a05698e7'
     'principalIdDisplayName': 'Lighthouse - Azure  Backup Security'
     'roleDefinitionId': 'b24988ac-6180-42a0-ab88-20f7382dd24c'
