@@ -61,12 +61,6 @@ param authorizations array = [
     'roleDefinitionId': '92aaf0da-9dab-42b6-94a3-d43ce8d16293'
   }
   {
-    // Assign Monitoring Contributor Role to the 'Lighthouse - Azure Operators'
-    'principalId': '2c09140a-aad7-44d3-90cc-f54c001ecf70'
-    'principalIdDisplayName': 'Lighthouse - Azure Operators'
-    'roleDefinitionId': '749f88d5-cbae-40b8-bcfc-e573ddc772fa'
-  }
-  {
     // Assign Automation Operator Role to the 'Lighthouse - Azure Operators'
     'principalId': '2c09140a-aad7-44d3-90cc-f54c001ecf70'
     'principalIdDisplayName': 'Lighthouse - Azure Operators'
