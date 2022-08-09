@@ -119,7 +119,6 @@ Additionally when elevating into groups with any kind of write privilege (all ex
 | Lighthouse - Azure Operators              	| Backup Operator                          	|
 | Lighthouse - Azure Operators              	| Reader                                   	|
 | Lighthouse - Azure Operators              	| Log Analytics Contributor                	|
-| Lighthouse - Azure Operators              	| Monitoring Contributor                   	|
 | Lighthouse - Azure Operators              	| Automation Operator                      	|
 | Lighthouse - Azure Operators              	| Automation Runbook Operator              	|
 | Lighthouse - Azure Operators              	| Managed Application Operator             	|
