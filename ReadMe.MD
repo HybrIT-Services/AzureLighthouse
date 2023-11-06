@@ -108,23 +108,23 @@ Additionally when elevating into groups with any kind of write privilege (all ex
 
 ## Role Assignment Summary Table
 
-| Privilelege Access Group                  | Role Assignment                           |
-| ----------------------------------------- | ----------------------------------------- |
-| Lighthouse - Azure Privilege Contributors | Contributor                               |
-| Lighthouse - Azure Privilege Contributors | Managed Services Registration assignment  |
-| Lighthouse - Azure Privilege Contributors | Lighthouse - Azure Privilege Contributors |
-| Lighthouse - Azure Privilege Contributors | Assign roles to Managed Identities        |
-| Lighthouse - Azure Contributors           | Contributor                               |
-| Lighthouse - Azure Reader                 | Reader                                    |
-| Lighthouse - Azure Operators              | Virtual Machine Contributor               |
-| Lighthouse - Azure Operators              | Backup Operator                           |
-| Lighthouse - Azure Operators              | Reader                                    |
-| Lighthouse - Azure Operators              | Log Analytics Contributor                 |
-| Lighthouse - Azure Operators              | Monitoring Contributor                    |
-| Lighthouse - Azure Operators              | Automation Operator                       |
-| Lighthouse - Azure Operators              | Automation Runbook Operator               |
-| Lighthouse - Azure Operators              | Managed Application Operator              |
-| Lighthouse - Azure Operators              | Site Recovery Operator                    |
+| Privilelege Access Group                  | Role Assignment                          |
+| ----------------------------------------- | ---------------------------------------- |
+| Lighthouse - Azure Privilege Contributors | Contributor                              |
+| Lighthouse - Azure Privilege Contributors | Managed Services Registration assignment |
+| Lighthouse - Azure Privilege Contributors | Resource Policy Contributor              |
+| Lighthouse - Azure Privilege Contributors | Assign roles to Managed Identities       |
+| Lighthouse - Azure Contributors           | Contributor                              |
+| Lighthouse - Azure Reader                 | Reader                                   |
+| Lighthouse - Azure Operators              | Virtual Machine Contributor              |
+| Lighthouse - Azure Operators              | Backup Operator                          |
+| Lighthouse - Azure Operators              | Reader                                   |
+| Lighthouse - Azure Operators              | Log Analytics Contributor                |
+| Lighthouse - Azure Operators              | Monitoring Contributor                   |
+| Lighthouse - Azure Operators              | Automation Operator                      |
+| Lighthouse - Azure Operators              | Automation Runbook Operator              |
+| Lighthouse - Azure Operators              | Managed Application Operator             |
+| Lighthouse - Azure Operators              | Site Recovery Operator                   |
 
 ## We only want to allow Reader at this stage
 
