@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.1124.51302",
-      "templateHash": "7158087928582905081"
+      "version": "0.14.85.62628",
+      "templateHash": "12480206180483550073"
     }
   },
   "parameters": {
@@ -33,6 +33,11 @@
           "principalId": "d31192cd-e9fd-4917-bc1f-cceb0fa03ea3",
           "principalIdDisplayName": "Lighthouse - Azure Privilege Contributors",
           "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46"
+        },
+        {
+          "principalId": "d31192cd-e9fd-4917-bc1f-cceb0fa03ea3",
+          "principalIdDisplayName": "Lighthouse - Azure Privilege Contributors",
+          "roleDefinitionId": "36243c78-bf99-498c-9df9-86d9f8d28608"
         },
         {
           "principalId": "d31192cd-e9fd-4917-bc1f-cceb0fa03ea3",

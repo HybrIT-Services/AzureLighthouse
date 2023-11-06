@@ -9,10 +9,16 @@ param authorizations array = [
     'roleDefinitionId': 'b24988ac-6180-42a0-ab88-20f7382dd24c'
   }
   {
-    // Managed Services Registration assignment to the 'Lighthouse - Azure Privilege Contributors'
+    // Assign Managed Services Registration assignment to the 'Lighthouse - Azure Privilege Contributors'
     'principalId': 'd31192cd-e9fd-4917-bc1f-cceb0fa03ea3'
     'principalIdDisplayName': 'Lighthouse - Azure Privilege Contributors'
     'roleDefinitionId': '91c1777a-f3dc-4fae-b103-61d183457e46'
+  }
+  {
+    // Assign the Resource Policy Contributor to the 'Lighthouse - Azure Privilege Contributors'
+    'principalId': 'd31192cd-e9fd-4917-bc1f-cceb0fa03ea3'
+    'principalIdDisplayName': 'Lighthouse - Azure Privilege Contributors'
+    'roleDefinitionId': '36243c78-bf99-498c-9df9-86d9f8d28608'
   }
   {
     // Give permission to assign roles to Managed Identities to the 'Lighthouse - Azure Privilege Contributors'
