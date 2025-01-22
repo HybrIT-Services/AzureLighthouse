@@ -97,6 +97,11 @@
           "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
           "principalIdDisplayName": "Lighthouse - Azure Operators",
           "roleDefinitionId": "494ae006-db33-4328-bf46-533a6560a3ca"
+        },
+        {
+          "principalId": "2c09140a-aad7-44d3-90cc-f54c001ecf70",
+          "principalIdDisplayName": "Lighthouse - Azure Operators",
+          "roleDefinitionId": "ea4bfff8-7fb4-485a-aadd-d4129a0ffaa6"
         }
       ]
     }

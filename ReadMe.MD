@@ -10,7 +10,6 @@ https://azure.microsoft.com/en-gb/blog/privileged-identity-management-with-azure
 
 This Feature was announced by Microsoft July 2021, for further reading please see Microsoft Azure Blog
 
-
 - [Introduction](#introduction)
 - [How to use](#how-to-use)
   - [Apply to Single Subscription](#apply-to-single-subscription)
@@ -27,17 +26,20 @@ This Feature was announced by Microsoft July 2021, for further reading please se
 
 # How to use
 
-1.  Sign in to your Azure Tenancy using Windows PowerShell. Use an account that has owner rights against any subscriptions you want to enrol in Azure Lighthouse.
+1. Sign in to your Azure Tenancy using Windows PowerShell. Use an account that has owner rights against any subscriptions you want to enrol in Azure Lighthouse.
+
 ```
 Connect-AzAccount
 ```
+
 ## Apply to Single Subscription
 
-1.  If you would like to HybrIT to only access a single subscription via Azure Light house check you are connected to the correct subscription
+1. If you would like to HybrIT to only access a single subscription via Azure Light house check you are connected to the correct subscription
 
 ```
 Get-AzContext
 ```
+
 ![Get-AzContext](img/get-azcontext.png)
 
 2. If you need to switch subscriptions you can use the below command
@@ -58,7 +60,7 @@ New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubu
 
 **Note: If you intend to use a seperate Subscription of Azure Resource Guard then ensure to deploy that subscription after running the below or apply one subscription at a time or exlude the Backup Security Subscription from the assignment**
 
-1.  To apply to all subscription that your signed in user has rights to run the below commands. Firstly check you can see the intented subscriptions from your PowerShell windows
+1. To apply to all subscription that your signed in user has rights to run the below commands. Firstly check you can see the intented subscriptions from your PowerShell windows
 
 ```
 Get-AzSubscription
@@ -68,7 +70,7 @@ You should see a return of the subscriptions you have access to.
 
 ![Get-AzSubscription](img/get-azsubscription.png)
 
-2.  Run the below script to assign to all subscriptions
+2. Run the below script to assign to all subscriptions
 
 ```
 $subs = Get-AzSubscription
@@ -80,7 +82,7 @@ foreach ($sub in $subs) {
 
 ```
 
-3.  If you need to exclude a subscription such as BackupSecurity filter it out with the below **ensure to check your subscription name**
+3. If you need to exclude a subscription such as BackupSecurity filter it out with the below **ensure to check your subscription name**
 
 ```
 $subs = Get-AzSubscription | Where-Object { $_.name -notlike "*BackupSecurity*" }
@@ -91,6 +93,7 @@ foreach ($sub in $subs) {
 }
 
 ```
+
 # What Roles get assigned and to who?
 
 ## Roles
@@ -108,23 +111,24 @@ Additionally when elevating into groups with any kind of write privilege (all ex
 
 ## Role Assignment Summary Table
 
-| Privilelege Access Group                  | Role Assignment                          |
-| ----------------------------------------- | ---------------------------------------- |
-| Lighthouse - Azure Privilege Contributors | Contributor                              |
-| Lighthouse - Azure Privilege Contributors | Managed Services Registration assignment |
-| Lighthouse - Azure Privilege Contributors | Resource Policy Contributor              |
-| Lighthouse - Azure Privilege Contributors | Assign roles to Managed Identities       |
-| Lighthouse - Azure Contributors           | Contributor                              |
-| Lighthouse - Azure Reader                 | Reader                                   |
-| Lighthouse - Azure Operators              | Virtual Machine Contributor              |
-| Lighthouse - Azure Operators              | Backup Operator                          |
-| Lighthouse - Azure Operators              | Reader                                   |
-| Lighthouse - Azure Operators              | Log Analytics Contributor                |
-| Lighthouse - Azure Operators              | Monitoring Contributor                   |
-| Lighthouse - Azure Operators              | Automation Operator                      |
-| Lighthouse - Azure Operators              | Automation Runbook Operator              |
-| Lighthouse - Azure Operators              | Managed Application Operator             |
-| Lighthouse - Azure Operators              | Site Recovery Operator                   |
+| Privilelege Access Group                  | Role Assignment                              |
+| ----------------------------------------- | -------------------------------------------- |
+| Lighthouse - Azure Privilege Contributors | Contributor                                  |
+| Lighthouse - Azure Privilege Contributors | Managed Services Registration assignment     |
+| Lighthouse - Azure Privilege Contributors | Resource Policy Contributor                  |
+| Lighthouse - Azure Privilege Contributors | Assign roles to Managed Identities           |
+| Lighthouse - Azure Contributors           | Contributor                                  |
+| Lighthouse - Azure Reader                 | Reader                                       |
+| Lighthouse - Azure Operators              | Virtual Machine Contributor                  |
+| Lighthouse - Azure Operators              | Backup Operator                              |
+| Lighthouse - Azure Operators              | Reader                                       |
+| Lighthouse - Azure Operators              | Log Analytics Contributor                    |
+| Lighthouse - Azure Operators              | Monitoring Contributor                       |
+| Lighthouse - Azure Operators              | Automation Operator                          |
+| Lighthouse - Azure Operators              | Automation Runbook Operator                  |
+| Lighthouse - Azure Operators              | Managed Application Operator                 |
+| Lighthouse - Azure Operators              | Site Recovery Operator                       |
+| Lighthouse - Azure Operators              | Desktop Virtualization User Session Operator |
 
 ## We only want to allow Reader at this stage
 
@@ -137,6 +141,7 @@ For instructions on connecting and selecting single subscriptions please see ear
 ```
 New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubusercontent.com/HybrIT-Services/AzureLighthouse/main/HybrITReaderLightHouse.json'
 ```
+
 ### Apply to all subscriptions (reader only)
 
 ```
@@ -148,6 +153,7 @@ foreach ($sub in $subs) {
 }
 
 ```
+
 # Apply Backup Security (Resource Guard) to single subscription
 
 If you require HybrIT to provide Multi-User authorization to protect your back up against "Critical Operations" such as preventing deletion by a bad actor then apply the below command against a dedicated Subscription that is used only for the purpose of Resource Guard. For more information see: https://docs.microsoft.com/en-us/azure/backup/multi-user-authorization
@@ -157,6 +163,7 @@ If you require HybrIT to provide Multi-User authorization to protect your back u
 ```
 New-AzSubscriptionDeployment -location uksouth -TemplateURI 'https://raw.githubusercontent.com/HybrIT-Services/AzureLighthouse/main/HybrITSecureBackupLightHouse.json'
 ```
+
 # Remove Access
 
 Access can be removed at any time from the Portal or by using Azure PowerShell. To remove from Access from the portal use the search bar to find "Service Providers"
